@@ -1,16 +1,44 @@
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
-  color: #333;
+/* Basic Styles */
+body,
+html {
+  font-family: 'Arial', sans-serif;
   margin: 0;
   padding: 0;
+}
+
+.navbar {
+  border-bottom: 2px solid #ddd;
+}
+
+.navbar-nav .nav-link {
+  font-size: 1.1rem;
+}
+
+.navbar-text {
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.container {
+  max-width: 960px;
 }
 
 h1 {
   text-align: center;
   margin-top: 20px;
+  font-size: 2.5rem;
 }
 
 p {
   text-align: center;
+  font-size: 1.2rem;
+}
+/* Gallery Styles */
+#gallery img {
+  border: 2px solid #ddd;
+  transition: transform 0.3s ease;
+}
+
+#gallery img:hover {
+  transform: scale(1.05);
 }
