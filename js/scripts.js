@@ -1,4 +1,3 @@
-console.log('JavaScript is connected!');
 // Array to store image filenames and captions
 const galleryImages = [
   { src: 'images/interior1.jpg', alt: 'Interior Painting Project' },
@@ -16,12 +15,12 @@ function generateGallery() {
   // Loop through the galleryImages array and create image elements
   galleryImages.forEach((image) => {
     const colDiv = document.createElement('div');
-    colDiv.className = 'col-md-4 mb-4';
+    colDiv.className = 'col-sm-6 col-md-4 mb-4'; // Adjust column size for different screens
 
     const img = document.createElement('img');
     img.src = image.src;
     img.alt = image.alt;
-    img.className = 'img-fluid rounded';
+    img.className = 'img-fluid rounded'; // Make images responsive
     img.style.cursor = 'pointer';
     img.setAttribute('onclick', `openImage('${image.src}', '${image.alt}')`);
 

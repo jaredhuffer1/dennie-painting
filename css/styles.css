@@ -37,8 +37,26 @@ p {
 #gallery img {
   border: 2px solid #ddd;
   transition: transform 0.3s ease;
+  width: 100%; /* Ensure images take full width of their column */
+  height: auto; /* Maintain aspect ratio */
 }
 
 #gallery img:hover {
   transform: scale(1.05);
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+  .navbar-brand,
+  .navbar-text {
+    font-size: 1.2rem; /* Adjust navbar text size on smaller screens */
+  }
+
+  h1 {
+    font-size: 1.8rem; /* Adjust heading size */
+  }
+
+  p {
+    font-size: 1rem; /* Adjust paragraph size */
+  }
 }
