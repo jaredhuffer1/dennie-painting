@@ -170,26 +170,35 @@ html {
   }
 
   /* Flashing Phone Number in Hero Section */
+  /* Flashing Phone Number Styling */
   .hero-phone-number {
     position: absolute; /* Position relative to the hero section */
     top: 20px; /* Position 20px from the top */
     right: 20px; /* Position 20px from the right */
-
+    font-size: 1.5rem; /* Set font size */
     font-weight: bold;
     color: #ff4444; /* Red color to stand out */
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Optional: Shadow for better visibility */
     z-index: 10; /* Ensure it stays on top */
   }
 
+  /* Style the Phone Link */
   .hero-phone-number .phone-link {
+    display: inline-block; /* Ensure it’s treated like a button */
+    padding: 10px 20px; /* Add padding */
+    background-color: transparent; /* Remove default background */
+    border: 2px solid #ff4444; /* Add red border */
+    border-radius: 5px; /* Slight rounding of corners */
+    color: #ff4444 !important; /* Override Bootstrap link color */
     text-decoration: none; /* Remove underline */
-    color: inherit; /* Inherit color from parent */
-    animation: flash 1s infinite; /* Apply flashing animation */
-    font-size: 1.7rem;
+    font-size: 1.5rem; /* Adjust font size */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transitions */
   }
 
+  /* Style on Hover */
   .hero-phone-number .phone-link:hover {
-    color: #ff0000; /* Change color on hover */
+    background-color: #ff4444; /* Red background on hover */
+    color: #fff !important; /* White text on hover */
   }
 
   /* Flash Animation */
@@ -203,12 +212,22 @@ html {
     }
   }
 
-  /* Responsive Styling for Hero Phone Number */
+  /* Apply Flashing Effect */
+  .hero-phone-number .phone-link {
+    animation: flash 1s infinite; /* Apply flashing animation */
+  }
+
+  /* Responsive Styling for Phone Number */
   @media (max-width: 768px) {
     .hero-phone-number {
-      font-size: 1rem; /* Smaller font size on mobile */
+      font-size: 1.2rem; /* Smaller font size on mobile */
       top: 10px; /* Adjust position on mobile */
       right: 10px; /* Adjust position on mobile */
+    }
+
+    .hero-phone-number .phone-link {
+      font-size: 1.2rem; /* Adjust link font size */
+      padding: 8px 16px; /* Adjust padding on mobile */
     }
   }
 
