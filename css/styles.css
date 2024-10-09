@@ -28,7 +28,7 @@ html {
 
 .navbar-text {
   color: #ffffff !important; /* Set company name text color to white */
-  font-size: 1.3rem;
+  font-size: 2.2rem !important;
   font-weight: bold;
 }
 
