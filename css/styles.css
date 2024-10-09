@@ -143,7 +143,7 @@ p {
 .hero-section {
   position: relative;
   height: 100vh; /* Full viewport height */
-  background-image: url('../images/hero-background.jpg'); /* Replace with your hero image */
+  background-image: url('../images/bucketofpaintwithrollor.jpg'); /* Replace with your hero image */
   background-size: cover;
   background-position: center;
   background-attachment: fixed; /* Creates a parallax scrolling effect */
@@ -170,7 +170,7 @@ p {
 
 /* Discount Section Styling */
 .discount-section {
-  background: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
   padding: 20px;
   border-radius: 8px;
   margin-top: 50px;
