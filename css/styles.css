@@ -268,14 +268,16 @@ html {
   padding: 20px;
 }
 
-/* Adjust Discount Section Styles Inside Hero */
+/* Position Discount Section with Margin */
 .hero-section .discount-section {
+  margin-top: 400px; /* Adjust this value to move it lower */
   background: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
   color: #ffffff; /* White text color */
   padding: 20px;
   border-radius: 8px;
   max-width: 600px;
-  margin-top: 400px; /* Spacing below the Get in Touch button */
+  text-align: center;
+  z-index: 10; /* Ensure it stays above other elements */
 }
 
 /* Responsive Styling for Discount Section */
