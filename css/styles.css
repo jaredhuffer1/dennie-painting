@@ -60,19 +60,28 @@ html {
 .hero-section {
   position: relative;
   height: 100vh; /* Full viewport height */
-  background-image: url(../images/3colorsroll.jpg); /* Replace with your hero image */
+  background-image: url(../images/wallroll.jpg); /* Replace with your hero image */
   background-size: cover;
-  background-position: bottom !important;
+  background-position: center;
   background-attachment: fixed; /* Creates a parallax scrolling effect */
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  flex-direction: column; /* Arrange content vertically */
+  justify-content: space-between; /* Push elements to top and bottom */
+  align-items: center; /* Center elements horizontally */
   color: #ffffff;
   text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6); /* Add text shadow for better visibility */
+  padding: 20px;
 }
 
 /* Hero Section Content Styling */
+.hero-section .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1; /* Allow container to grow and fill available space */
+}
+
 .hero-title {
   font-size: 3rem;
   margin-bottom: 15px;
@@ -86,15 +95,19 @@ html {
 }
 
 /* Discount Section Styling */
-.discount-section {
+.hero-section .discount-section {
   background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  color: #ffffff; /* White text color */
   padding: 20px;
   border-radius: 8px;
-  margin-top: 50px;
   max-width: 600px;
-  animation: fadeIn 2s ease-in-out; /* Scroll animation */
+  margin-top: 50px; /* Space from hero content */
+  margin-bottom: 50px; /* Add space below discount section */
+  text-align: center;
+  z-index: 10; /* Ensure it stays above other elements */
 }
 
+/* Discount Section Content */
 .discount-title {
   font-size: 2rem;
   margin-bottom: 10px;
@@ -102,6 +115,52 @@ html {
 
 .discount-text {
   font-size: 1.2rem;
+}
+
+/* Phone Number Styling in Hero Section */
+.hero-phone-number {
+  position: absolute; /* Position relative to the hero section */
+  top: 20px; /* Position 20px from the top */
+  right: 20px; /* Position 20px from the right */
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ff4444; /* Red color to stand out */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Optional: Shadow for better visibility */
+  z-index: 10; /* Ensure it stays on top */
+}
+
+/* Style the Phone Link */
+.hero-phone-number .phone-link {
+  display: inline-block; /* Ensure it’s treated like a button */
+  padding: 10px 20px; /* Add padding */
+  background-color: transparent; /* Remove default background */
+  border: 2px solid #ff4444; /* Add red border */
+  border-radius: 5px; /* Slight rounding of corners */
+  color: #ff4444 !important; /* Override Bootstrap link color */
+  text-decoration: none; /* Remove underline */
+  font-size: 1.5rem; /* Adjust font size */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transitions */
+}
+
+/* Style on Hover */
+.hero-phone-number .phone-link:hover {
+  background-color: #ff4444; /* Red background on hover */
+  color: #fff !important; /* White text on hover */
+}
+
+/* Flash Animation */
+@keyframes flash {
+  0%,
+  100% {
+    opacity: 1; /* Fully visible */
+  }
+  50% {
+    opacity: 0.5; /* Half visible */
+  }
+}
+
+.hero-phone-number .phone-link {
+  animation: flash 1s infinite; /* Apply flashing animation */
 }
 
 /* Scroll Animations */
@@ -148,152 +207,6 @@ html {
   transform: scale(1.05); /* Zoom effect */
 }
 
-/* Responsive Styling */
-@media (max-width: 768px) {
-  .navbar-text {
-    display: block;
-    text-align: center;
-    width: 100%;
-    font-size: 1.2rem;
-    margin-top: 10px; /* Spacing */
-  }
-
-  .navbar-nav .nav-link {
-    font-size: 1rem; /* Slightly smaller links */
-  }
-
-  .navbar .btn-dark {
-    display: block;
-    width: 100%;
-    text-align: center;
-    margin: 10px 0;
-  }
-
-  /* Flashing Phone Number in Hero Section */
-  /* Flashing Phone Number Styling */
-  .hero-phone-number {
-    position: absolute; /* Position relative to the hero section */
-    top: 20px; /* Position 20px from the top */
-    right: 20px; /* Position 20px from the right */
-    font-size: 1.5rem; /* Set font size */
-    font-weight: bold;
-    color: #ff4444; /* Red color to stand out */
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Optional: Shadow for better visibility */
-    z-index: 10; /* Ensure it stays on top */
-  }
-
-  /* Style the Phone Link */
-  .hero-phone-number .phone-link {
-    display: inline-block; /* Ensure it’s treated like a button */
-    padding: 10px 20px; /* Add padding */
-    background-color: transparent; /* Remove default background */
-    border: 2px solid #ff4444; /* Add red border */
-    border-radius: 5px; /* Slight rounding of corners */
-    color: #ff4444 !important; /* Override Bootstrap link color */
-    text-decoration: none; /* Remove underline */
-    font-size: 1.5rem; /* Adjust font size */
-    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transitions */
-  }
-
-  /* Style on Hover */
-  .hero-phone-number .phone-link:hover {
-    background-color: #ff4444; /* Red background on hover */
-    color: #fff !important; /* White text on hover */
-  }
-
-  /* Flash Animation */
-  @keyframes flash {
-    0%,
-    100% {
-      opacity: 1; /* Fully visible */
-    }
-    50% {
-      opacity: 0.5; /* Half visible */
-    }
-  }
-
-  /* Apply Flashing Effect */
-  .hero-phone-number .phone-link {
-    animation: flash 1s infinite; /* Apply flashing animation */
-  }
-
-  /* Responsive Styling for Phone Number */
-  @media (max-width: 768px) {
-    .hero-phone-number {
-      font-size: 1.2rem; /* Smaller font size on mobile */
-      top: 10px; /* Adjust position on mobile */
-      right: 10px; /* Adjust position on mobile */
-    }
-
-    .hero-phone-number .phone-link {
-      font-size: 1.2rem; /* Adjust link font size */
-      padding: 8px 16px; /* Adjust padding on mobile */
-    }
-  }
-
-  .hero-title {
-    font-size: 2.5rem; /* Smaller font size for mobile */
-  }
-
-  .hero-subtitle {
-    font-size: 1.2rem; /* Smaller subtitle size for mobile */
-  }
-
-  .discount-section {
-    padding: 15px; /* Adjust padding for mobile */
-  }
-
-  .discount-title {
-    font-size: 1.8rem; /* Smaller title size for mobile */
-  }
-
-  .discount-text {
-    font-size: 1rem; /* Smaller text size for mobile */
-  }
-}
-/* Hero Section Styles */
-.hero-section {
-  position: relative;
-  height: 100vh; /* Full viewport height */
-  background-image: url(../images/bucketofpaintwithrollor.jpg); /* Replace with your hero image */
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed; /* Creates a parallax scrolling effect */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  color: #ffffff;
-  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6); /* Add text shadow for better visibility */
-  padding: 20px;
-}
-
-/* Position Discount Section with Margin */
-.hero-section .discount-section {
-  margin-top: 400px; /* Adjust this value to move it lower */
-  background: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
-  color: #ffffff; /* White text color */
-  padding: 20px;
-  border-radius: 8px;
-  max-width: 600px;
-  text-align: center;
-  z-index: 10; /* Ensure it stays above other elements */
-}
-
-/* Responsive Styling for Discount Section */
-@media (max-width: 768px) {
-  .hero-section .discount-section {
-    padding: 15px;
-    max-width: 100%;
-  }
-}
-
-/* Parallax Effect Control for Mobile */
-@media (max-width: 768px) {
-  .hero-section {
-    background-attachment: scroll; /* Disable parallax effect on mobile devices */
-  }
-}
 /* Sponsor Section Styling */
 .sponsor-section {
   padding: 50px 0;
@@ -348,6 +261,56 @@ html {
 
 /* Responsive Styling */
 @media (max-width: 768px) {
+  .navbar-text {
+    display: block;
+    text-align: center;
+    width: 100%;
+    font-size: 1.2rem;
+    margin-top: 10px; /* Spacing */
+  }
+
+  .navbar-nav .nav-link {
+    font-size: 1rem; /* Slightly smaller links */
+  }
+
+  .navbar .btn-dark {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin: 10px 0;
+  }
+
+  .hero-phone-number {
+    font-size: 1.2rem; /* Smaller font size on mobile */
+    top: 10px; /* Adjust position on mobile */
+    right: 10px; /* Adjust position on mobile */
+  }
+
+  .hero-phone-number .phone-link {
+    font-size: 1.2rem; /* Adjust link font size */
+    padding: 8px 16px; /* Adjust padding on mobile */
+  }
+
+  .hero-title {
+    font-size: 2.5rem; /* Smaller font size for mobile */
+  }
+
+  .hero-subtitle {
+    font-size: 1.2rem; /* Smaller subtitle size for mobile */
+  }
+
+  .discount-section {
+    padding: 15px; /* Adjust padding for mobile */
+  }
+
+  .discount-title {
+    font-size: 1.8rem; /* Smaller title size for mobile */
+  }
+
+  .discount-text {
+    font-size: 1rem; /* Smaller text size for mobile */
+  }
+
   .sponsor-carousel {
     height: 100px; /* Adjust height for smaller screens */
   }
@@ -358,5 +321,10 @@ html {
 
   .sponsor-title {
     font-size: 1.8rem;
+  }
+
+  /* Parallax Effect Control for Mobile */
+  .hero-section {
+    background-attachment: scroll; /* Disable parallax effect on mobile devices */
   }
 }
