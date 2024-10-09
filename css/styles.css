@@ -60,7 +60,7 @@ html {
 .hero-section {
   position: relative;
   height: 100vh; /* Full viewport height */
-  background-image: url(../images/lady.jpg); /* Replace with your hero image */
+  background-image: url(../images/3colorsroll.jpg); /* Replace with your hero image */
   background-size: cover;
   background-position: bottom !important;
   background-attachment: fixed; /* Creates a parallax scrolling effect */
@@ -255,7 +255,7 @@ html {
 .hero-section {
   position: relative;
   height: 100vh; /* Full viewport height */
-  background-image: url(../images/lady.jpg); /* Replace with your hero image */
+  background-image: url(../images/bucketofpaintwithrollor.jpg); /* Replace with your hero image */
   background-size: cover;
   background-position: center;
   background-attachment: fixed; /* Creates a parallax scrolling effect */
@@ -275,7 +275,7 @@ html {
   padding: 20px;
   border-radius: 8px;
   max-width: 600px;
-  margin-top: 30px; /* Spacing below the Get in Touch button */
+  margin-top: 400px; /* Spacing below the Get in Touch button */
 }
 
 /* Responsive Styling for Discount Section */
