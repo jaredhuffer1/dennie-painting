@@ -60,17 +60,31 @@ html {
 .hero-section {
   position: relative;
   height: 100vh; /* Full viewport height */
-  background-image: url(../images/wallroll.jpg); /* Replace with your hero image */
-  background-size: cover;
-  background-position: center;
+  background-image: url(../images/bucketofpaintwithrollor.jpg); /* Replace with your hero image path */
+  background-size: cover; /* Adjust the size to cover the entire section */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Prevent background image from repeating */
   background-attachment: fixed; /* Creates a parallax scrolling effect */
   display: flex;
-  flex-direction: column; /* Arrange content vertically */
-  justify-content: space-between; /* Push elements to top and bottom */
+  flex-direction: column;
+  justify-content: space-between; /* Space elements evenly */
   align-items: center; /* Center elements horizontally */
   color: #ffffff;
   text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6); /* Add text shadow for better visibility */
   padding: 20px;
+}
+
+/* Responsive Styling for Hero Section on Mobile */
+@media (max-width: 768px) {
+  .hero-section {
+    height: auto; /* Allow height to adjust based on content */
+    min-height: 100vh; /* Minimum height should be 100% of the viewport */
+    background-size: contain; /* Contain the entire image within the hero section */
+    background-position: center top; /* Position the image at the top center */
+    background-attachment: scroll; /* Disable parallax effect on mobile devices */
+    background-repeat: no-repeat; /* Ensure no repetition */
+    padding: 20px; /* Adjust padding */
+  }
 }
 
 /* Hero Section Content Styling */
