@@ -6,28 +6,50 @@ html {
   padding: 0;
 }
 
+/* Ensure Navbar Background and Link Colors Contrast Well */
 .navbar {
-  padding: 8px 15px; /* Reduce padding to prevent the navbar from taking up too much space */
-  background-color: #f8f9fa; /* Light gray background color for the navbar */
-  border-bottom: 1px solid #ddd; /* Light border at the bottom for separation */
+  padding: 15px;
+  background-image: url(/images/navBackground.jpg); /* Replace with your image path */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-bottom: 2px solid #ddd; /* Optional: Keep or remove border */
 }
 
+/* Set Navigation Link Colors to Ensure Visibility */
 .navbar-nav .nav-link {
-  font-size: 1.1rem;
-  color: #333; /* Neutral color for the nav links */
-  margin-right: 15px;
+  color: #ffffff !important; /* Set link color to white */
+  font-size: 1.1rem; /* Increase font size for better readability */
+  font-weight: 500; /* Use a slightly bolder font */
 }
 
 .navbar-nav .nav-link:hover {
-  color: #555; /* Slightly darker hover effect */
+  color: #f8f9fa !important; /* Slightly lighter white on hover */
 }
 
+/* Adjust Company Name Text Color */
 .navbar-text {
+  color: #ffffff !important; /* Set the company name text color to white */
   font-size: 1.3rem;
   font-weight: bold;
-  color: #333; /* Neutral color for the company name */
 }
 
+/* Add Text Shadow for Better Visibility (Optional) */
+.navbar-nav .nav-link,
+.navbar-text {
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); /* Add a dark shadow to enhance contrast */
+}
+.navbar-toggler {
+  border-color: rgba(
+    255,
+    255,
+    255,
+    0.5
+  ) !important; /* Change the border color to white with some transparency */
+  .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=UTF8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E"); /* Change the menu icon to white */
+  }
+}
 /* Remove Blue Color from Bootstrap's Primary Button */
 .btn-dark {
   background-color: #555; /* Set button to dark gray */
