@@ -196,3 +196,69 @@ html {
     background-attachment: scroll; /* Disable parallax effect on mobile devices */
   }
 }
+/* Sponsor Section Styling */
+.sponsor-section {
+  padding: 50px 0;
+  background-color: #f8f9fa; /* Optional: Light background color */
+}
+
+.sponsor-title {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+/* Auto-Scrolling Sponsor Carousel Styling */
+.sponsor-carousel {
+  overflow: hidden; /* Hide overflow */
+  position: relative;
+  width: 100%; /* Full width of container */
+}
+
+.sponsor-track {
+  display: flex;
+  animation: scroll 20s linear infinite; /* Scroll animation */
+}
+
+.sponsor-logo {
+  flex: 0 0 auto; /* Prevent wrapping */
+  width: 150px; /* Set fixed width for each logo */
+  margin: 0 20px; /* Space between logos */
+}
+
+.sponsor-logo img {
+  width: 100%; /* Full width of the logo container */
+  height: auto; /* Maintain aspect ratio */
+  border: 2px solid #ddd; /* Optional: Border around logos */
+  border-radius: 8px; /* Optional: Rounded corners */
+  transition: transform 0.3s ease; /* Animation on hover */
+}
+
+.sponsor-logo img:hover {
+  transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+/* Scroll Animation Keyframes */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%); /* Move left by 50% */
+  }
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .sponsor-carousel {
+    height: 100px; /* Adjust height for smaller screens */
+  }
+
+  .sponsor-logo {
+    width: 100px; /* Smaller logos on mobile */
+  }
+
+  .sponsor-title {
+    font-size: 1.8rem;
+  }
+}
