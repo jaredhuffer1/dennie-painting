@@ -169,6 +169,49 @@ html {
     margin: 10px 0;
   }
 
+  /* Flashing Phone Number in Hero Section */
+  .hero-phone-number {
+    position: absolute; /* Position relative to the hero section */
+    top: 20px; /* Position 20px from the top */
+    right: 20px; /* Position 20px from the right */
+
+    font-weight: bold;
+    color: #ff4444; /* Red color to stand out */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Optional: Shadow for better visibility */
+    z-index: 10; /* Ensure it stays on top */
+  }
+
+  .hero-phone-number .phone-link {
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Inherit color from parent */
+    animation: flash 1s infinite; /* Apply flashing animation */
+    font-size: 1.7rem;
+  }
+
+  .hero-phone-number .phone-link:hover {
+    color: #ff0000; /* Change color on hover */
+  }
+
+  /* Flash Animation */
+  @keyframes flash {
+    0%,
+    100% {
+      opacity: 1; /* Fully visible */
+    }
+    50% {
+      opacity: 0.5; /* Half visible */
+    }
+  }
+
+  /* Responsive Styling for Hero Phone Number */
+  @media (max-width: 768px) {
+    .hero-phone-number {
+      font-size: 1rem; /* Smaller font size on mobile */
+      top: 10px; /* Adjust position on mobile */
+      right: 10px; /* Adjust position on mobile */
+    }
+  }
+
   .hero-title {
     font-size: 2.5rem; /* Smaller font size for mobile */
   }
@@ -187,6 +230,40 @@ html {
 
   .discount-text {
     font-size: 1rem; /* Smaller text size for mobile */
+  }
+}
+/* Hero Section Styles */
+.hero-section {
+  position: relative;
+  height: 100vh; /* Full viewport height */
+  background-image: url(../images/lady.jpg); /* Replace with your hero image */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* Creates a parallax scrolling effect */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #ffffff;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6); /* Add text shadow for better visibility */
+  padding: 20px;
+}
+
+/* Adjust Discount Section Styles Inside Hero */
+.hero-section .discount-section {
+  background: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+  color: #ffffff; /* White text color */
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 600px;
+  margin-top: 30px; /* Spacing below the Get in Touch button */
+}
+
+/* Responsive Styling for Discount Section */
+@media (max-width: 768px) {
+  .hero-section .discount-section {
+    padding: 15px;
+    max-width: 100%;
   }
 }
 
