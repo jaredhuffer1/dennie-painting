@@ -10,6 +10,7 @@
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
     />
     <link rel="stylesheet" href="css/styles.css" />
+    <!-- Your custom styles should be after Bootstrap -->
   </head>
   <body>
     <!-- Navigation Bar -->
@@ -76,16 +77,26 @@
       </div>
     </nav>
 
-    <!-- Hero Section (index.html) -->
-    <div class="jumbotron text-center">
-      <div class="container">
-        <h1 class="display-4">Professional House Painting Services</h1>
-        <p class="lead">
+    <!-- Hero Section with Large Background Image -->
+    <div class="hero-section">
+      <div class="container text-center">
+        <h1 class="display-4 hero-title">
+          Professional House Painting Services
+        </h1>
+        <p class="lead hero-subtitle">
           Bringing color to your home with expert craftsmanship and attention to
           detail.
         </p>
-        <!-- Get in Touch Button (Moved from Navbar) -->
         <a href="contact.html" class="btn btn-dark btn-lg">Get in Touch</a>
+
+        <!-- Discount Section -->
+        <div class="discount-section" id="discount-offer">
+          <h2 class="discount-title">Special 10% Discount!</h2>
+          <p class="discount-text">
+            We proudly offer a 10% discount to elderly individuals, veterans,
+            and those affected by the recent floods in Western North Carolina.
+          </p>
+        </div>
       </div>
     </div>
 

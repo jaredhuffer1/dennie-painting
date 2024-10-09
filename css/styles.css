@@ -6,120 +6,238 @@ html {
   padding: 0;
 }
 
-/* Ensure Navbar Background and Link Colors Contrast Well */
+/* Navigation Bar Styling */
 .navbar {
   padding: 15px;
-  background-image: url(/images/navBackground.jpg); /* Replace with your image path */
+  background-image: url('../images/navBackground.jpg'); /* Use './' for relative path */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  border-bottom: 2px solid #ddd; /* Optional: Keep or remove border */
+  border-bottom: 2px solid #ddd;
 }
 
-/* Set Navigation Link Colors to Ensure Visibility */
 .navbar-nav .nav-link {
   color: #ffffff !important; /* Set link color to white */
-  font-size: 1.1rem; /* Increase font size for better readability */
-  font-weight: 500; /* Use a slightly bolder font */
+  font-size: 1.1rem; /* Increase font size */
+  font-weight: 500; /* Slightly bolder font */
 }
 
 .navbar-nav .nav-link:hover {
-  color: #f8f9fa !important; /* Slightly lighter white on hover */
+  color: #f8f9fa !important; /* Lighter color on hover */
 }
 
-/* Adjust Company Name Text Color */
 .navbar-text {
-  color: #ffffff !important; /* Set the company name text color to white */
+  color: #ffffff !important; /* Set company name text color to white */
   font-size: 1.3rem;
   font-weight: bold;
 }
 
-/* Add Text Shadow for Better Visibility (Optional) */
-.navbar-nav .nav-link,
-.navbar-text {
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); /* Add a dark shadow to enhance contrast */
-}
+/* Custom Hamburger Menu Icon Styling */
 .navbar-toggler {
   border-color: rgba(
     255,
     255,
     255,
     0.5
-  ) !important; /* Change the border color to white with some transparency */
-  .navbar-toggler-icon {
-    background-image: url("data:image/svg+xml;charset=UTF8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E"); /* Change the menu icon to white */
-  }
+  ) !important; /* Set border color to semi-transparent white */
 }
-/* Remove Blue Color from Bootstrap's Primary Button */
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=UTF8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E") !important;
+}
+.navbar-light .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=UTF8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E") !important;
+}
+
+.navbar-dark .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=UTF8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E") !important;
+}
+
+/* Button Styling */
 .btn-dark {
-  background-color: #555; /* Set button to dark gray */
+  background-color: #555;
   border: none;
 }
 
 .btn-dark:hover {
-  background-color: #333; /* Darker shade on hover */
+  background-color: #333;
 }
 
-/* Container Styling */
-.container {
-  max-width: 960px; /* Limit container width */
+/* Hero Section Styling */
+.jumbotron {
+  background-color: #f8f9fa; /* Light background color */
+  padding: 50px 0; /* Spacing */
+  margin-bottom: 0;
 }
 
+.jumbotron .btn-dark {
+  background-color: #555;
+  border: none;
+  margin-top: 20px;
+}
+
+.jumbotron .btn-dark:hover {
+  background-color: #333;
+}
+
+/* Text Styling */
 h1 {
   text-align: center;
   margin-top: 20px;
   font-size: 2.5rem;
-  color: #333; /* Neutral color for headings */
+  color: #333; /* Neutral color */
 }
 
 p {
   text-align: center;
   font-size: 1.2rem;
-  color: #666; /* Slightly lighter text for paragraphs */
+  color: #666; /* Slightly lighter text */
 }
 
 /* Gallery Styles */
 #gallery img {
   border: 2px solid #ddd;
   transition: transform 0.3s ease;
-  width: 100%; /* Ensure images take full width of their column */
+  width: 100%; /* Full width of column */
   height: auto; /* Maintain aspect ratio */
 }
 
 #gallery img:hover {
-  transform: scale(1.05);
+  transform: scale(1.05); /* Zoom effect */
 }
 
 /* Responsive Styling for the Navigation Bar */
 .navbar .btn-dark {
-  margin: 10px auto; /* Center the button on smaller screens */
+  margin: 10px auto; /* Center button */
 }
 
-/* Media Queries for Responsive Design */
 @media (max-width: 768px) {
   .navbar-text {
     display: block;
     text-align: center;
     width: 100%;
     font-size: 1.2rem;
-    margin-top: 10px; /* Margin above the company name for better spacing */
+    margin-top: 10px; /* Spacing */
   }
 
-  /* Make "Get in Touch" button full-width on mobile */
+  .navbar-nav .nav-link {
+    font-size: 1rem; /* Slightly smaller links */
+  }
+
   .navbar .btn-dark {
     display: block;
     width: 100%;
     text-align: center;
-    margin: 10px 0; /* Margin for spacing */
+    margin: 10px 0;
   }
 
-  /* Adjust heading size on smaller screens */
   h1 {
-    font-size: 1.8rem; /* Reduce heading size on smaller screens */
+    font-size: 1.8rem; /* Smaller heading */
   }
 
-  /* Adjust paragraph size on smaller screens */
   p {
-    font-size: 1rem; /* Reduce paragraph size on smaller screens */
+    font-size: 1rem; /* Smaller paragraph */
+  }
+}
+/* Hero Section Styles */
+.hero-section {
+  position: relative;
+  height: 100vh; /* Full viewport height */
+  background-image: url('../images/hero-background.jpg'); /* Replace with your hero image */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* Creates a parallax scrolling effect */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #ffffff;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6); /* Add text shadow for better visibility */
+}
+
+/* Hero Section Content Styling */
+.hero-title {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  animation: fadeInDown 1s ease-in-out; /* Scroll animation */
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+  animation: fadeInUp 1s ease-in-out; /* Scroll animation */
+}
+
+/* Discount Section Styling */
+.discount-section {
+  background: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+  padding: 20px;
+  border-radius: 8px;
+  margin-top: 50px;
+  max-width: 600px;
+  animation: fadeIn 2s ease-in-out; /* Scroll animation */
+}
+
+.discount-title {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.discount-text {
+  font-size: 1.2rem;
+}
+
+/* Scroll Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2.5rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.2rem;
+  }
+
+  .discount-section {
+    padding: 15px;
+  }
+
+  .discount-title {
+    font-size: 1.8rem;
+  }
+
+  .discount-text {
+    font-size: 1rem;
   }
 }
