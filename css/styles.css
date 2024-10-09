@@ -9,7 +9,7 @@ html {
 /* Navigation Bar Styling */
 .navbar {
   padding: 15px;
-  background-image: url('../images/navBackground.jpg'); /* Replace with your image path */
+  background-image: url(../images/woodDeckStain.jpg); /* Replace with your image path */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -60,9 +60,9 @@ html {
 .hero-section {
   position: relative;
   height: 100vh; /* Full viewport height */
-  background-image: url('../images/bucketofpaintwithrollor.jpg'); /* Replace with your hero image */
+  background-image: url(../images/lady.jpg); /* Replace with your hero image */
   background-size: cover;
-  background-position: center;
+  background-position: bottom;
   background-attachment: fixed; /* Creates a parallax scrolling effect */
   display: flex;
   justify-content: center;
