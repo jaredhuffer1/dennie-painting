@@ -62,7 +62,7 @@ html {
   height: 100vh; /* Full viewport height */
   background-image: url(../images/lady.jpg); /* Replace with your hero image */
   background-size: cover;
-  background-position: bottom;
+  background-position: bottom !important;
   background-attachment: fixed; /* Creates a parallax scrolling effect */
   display: flex;
   justify-content: center;
