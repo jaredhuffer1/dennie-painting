@@ -9,7 +9,7 @@ html {
 /* Navigation Bar Styling */
 .navbar {
   padding: 15px;
-  background-image: url('../images/navBackground.jpg'); /* Use './' for relative path */
+  background-image: url('../images/navBackground.jpg'); /* Replace with your image path */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -45,13 +45,6 @@ html {
 .navbar-toggler-icon {
   background-image: url("data:image/svg+xml;charset=UTF8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E") !important;
 }
-.navbar-light .navbar-toggler-icon {
-  background-image: url("data:image/svg+xml;charset=UTF8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E") !important;
-}
-
-.navbar-dark .navbar-toggler-icon {
-  background-image: url("data:image/svg+xml;charset=UTF8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E") !important;
-}
 
 /* Button Styling */
 .btn-dark {
@@ -64,82 +57,6 @@ html {
 }
 
 /* Hero Section Styling */
-.jumbotron {
-  background-color: #f8f9fa; /* Light background color */
-  padding: 50px 0; /* Spacing */
-  margin-bottom: 0;
-}
-
-.jumbotron .btn-dark {
-  background-color: #555;
-  border: none;
-  margin-top: 20px;
-}
-
-.jumbotron .btn-dark:hover {
-  background-color: #333;
-}
-
-/* Text Styling */
-h1 {
-  text-align: center;
-  margin-top: 20px;
-  font-size: 2.5rem;
-  color: #333; /* Neutral color */
-}
-
-p {
-  text-align: center;
-  font-size: 1.2rem;
-  color: #666; /* Slightly lighter text */
-}
-
-/* Gallery Styles */
-#gallery img {
-  border: 2px solid #ddd;
-  transition: transform 0.3s ease;
-  width: 100%; /* Full width of column */
-  height: auto; /* Maintain aspect ratio */
-}
-
-#gallery img:hover {
-  transform: scale(1.05); /* Zoom effect */
-}
-
-/* Responsive Styling for the Navigation Bar */
-.navbar .btn-dark {
-  margin: 10px auto; /* Center button */
-}
-
-@media (max-width: 768px) {
-  .navbar-text {
-    display: block;
-    text-align: center;
-    width: 100%;
-    font-size: 1.2rem;
-    margin-top: 10px; /* Spacing */
-  }
-
-  .navbar-nav .nav-link {
-    font-size: 1rem; /* Slightly smaller links */
-  }
-
-  .navbar .btn-dark {
-    display: block;
-    width: 100%;
-    text-align: center;
-    margin: 10px 0;
-  }
-
-  h1 {
-    font-size: 1.8rem; /* Smaller heading */
-  }
-
-  p {
-    font-size: 1rem; /* Smaller paragraph */
-  }
-}
-/* Hero Section Styles */
 .hero-section {
   position: relative;
   height: 100vh; /* Full viewport height */
@@ -219,25 +136,63 @@ p {
   }
 }
 
+/* Gallery Styles */
+#gallery img {
+  border: 2px solid #ddd;
+  transition: transform 0.3s ease;
+  width: 100%; /* Full width of column */
+  height: auto; /* Maintain aspect ratio */
+}
+
+#gallery img:hover {
+  transform: scale(1.05); /* Zoom effect */
+}
+
 /* Responsive Styling */
 @media (max-width: 768px) {
+  .navbar-text {
+    display: block;
+    text-align: center;
+    width: 100%;
+    font-size: 1.2rem;
+    margin-top: 10px; /* Spacing */
+  }
+
+  .navbar-nav .nav-link {
+    font-size: 1rem; /* Slightly smaller links */
+  }
+
+  .navbar .btn-dark {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin: 10px 0;
+  }
+
   .hero-title {
-    font-size: 2.5rem;
+    font-size: 2.5rem; /* Smaller font size for mobile */
   }
 
   .hero-subtitle {
-    font-size: 1.2rem;
+    font-size: 1.2rem; /* Smaller subtitle size for mobile */
   }
 
   .discount-section {
-    padding: 15px;
+    padding: 15px; /* Adjust padding for mobile */
   }
 
   .discount-title {
-    font-size: 1.8rem;
+    font-size: 1.8rem; /* Smaller title size for mobile */
   }
 
   .discount-text {
-    font-size: 1rem;
+    font-size: 1rem; /* Smaller text size for mobile */
+  }
+}
+
+/* Parallax Effect Control for Mobile */
+@media (max-width: 768px) {
+  .hero-section {
+    background-attachment: scroll; /* Disable parallax effect on mobile devices */
   }
 }
