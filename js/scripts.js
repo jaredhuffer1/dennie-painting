@@ -1,29 +1,34 @@
-// Gallery Script
+// Array to store image filenames and captions
 const galleryImages = [
-  { src: 'images/interior1.jpg', alt: 'Interior Painting Project' },
-  { src: 'images/exterior1.jpg', alt: 'Exterior Painting Project' },
-  { src: 'images/staining1.jpg', alt: 'Deck Staining Project' },
+  { src: 'images/paintedroom.jpg', alt: 'Interior Painting Project' },
+  { src: 'images/stained door.jpg', alt: 'Exterior Painting Project' },
 ];
 
+// Function to generate the gallery
 function generateGallery() {
   const galleryContainer = document.getElementById('gallery');
-  if (galleryContainer) {
-    galleryContainer.innerHTML = '';
-    galleryImages.forEach((image) => {
-      const colDiv = document.createElement('div');
-      colDiv.className = 'col-sm-6 col-md-4 mb-4';
-      const img = document.createElement('img');
-      img.src = image.src;
-      img.alt = image.alt;
-      img.className = 'img-fluid rounded';
-      img.style.cursor = 'pointer';
-      img.setAttribute('onclick', `openImage('${image.src}', '${image.alt}')`);
-      colDiv.appendChild(img);
-      galleryContainer.appendChild(colDiv);
-    });
-  }
+
+  // Clear any existing content
+  galleryContainer.innerHTML = '';
+
+  // Loop through the galleryImages array and create image elements
+  galleryImages.forEach((image) => {
+    const colDiv = document.createElement('div');
+    colDiv.className = 'col-sm-6 col-md-4 mb-4'; // Adjust column size for different screens
+
+    const img = document.createElement('img');
+    img.src = image.src;
+    img.alt = image.alt;
+    img.className = 'img-fluid rounded'; // Make images responsive
+    img.style.cursor = 'pointer';
+    img.setAttribute('onclick', `openImage('${image.src}', '${image.alt}')`);
+
+    colDiv.appendChild(img);
+    galleryContainer.appendChild(colDiv);
+  });
 }
 
+// Function to open the image in a new tab
 function openImage(src, alt) {
   const newWindow = window.open();
   newWindow.document.write(
@@ -31,35 +36,5 @@ function openImage(src, alt) {
   );
 }
 
-// Navbar Script
-document.addEventListener('DOMContentLoaded', function () {
-  // Define the two images for the navbar states
-  const closedImage = 'images/crackedwhitewall.jpg'; // Image when the navbar is closed
-  const openImage = 'images/cleanwhitewall.jpg'; // Image when the navbar is opened
-
-  // Get the navbar elements
-  const navbar = document.getElementById('navbar');
-  const navbarToggler = document.getElementById('navbar-toggler');
-  const navbarCollapse = document.getElementById('navbarNav');
-
-  // Ensure the elements exist before applying event listeners
-  if (navbar && navbarToggler && navbarCollapse) {
-    // Add click event listener to the navbar toggler button
-    navbarToggler.addEventListener('click', function () {
-      // Check if the menu is being opened or closed
-      const isCollapsed = !navbarCollapse.classList.contains('show'); // True if menu is opening
-
-      // Change the background image based on the state
-      if (isCollapsed) {
-        navbar.style.backgroundImage = `url('${openImage}')`;
-      } else {
-        navbar.style.backgroundImage = `url('${closedImage}')`;
-      }
-    });
-
-    // Reset to the closed image on collapse hide event
-    navbarCollapse.addEventListener('hide.bs.collapse', function () {
-      navbar.style.backgroundImage = `url('${closedImage}')`;
-    });
-  }
-});
+// Call the function to generate the gallery
+generateGallery();
