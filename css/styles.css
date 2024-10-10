@@ -9,7 +9,7 @@ html {
 /* Navigation Bar Styling */
 .navbar {
   padding: 15px;
-  background-image: url(../images/woodDeckStain.jpg); /* Replace with your image path */
+  background-image: url(../images/crackedwhitewall.jpg); /* Replace with your image path */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -17,7 +17,7 @@ html {
 }
 
 .navbar-nav .nav-link {
-  color: #ffffff !important; /* Set link color to white */
+  color: #0a0909 !important; /* Set link color to white */
   font-size: 1.1rem; /* Increase font size */
   font-weight: 500; /* Slightly bolder font */
 }
@@ -27,7 +27,7 @@ html {
 }
 
 .navbar-text {
-  color: #ffffff !important; /* Set company name text color to white */
+  color: #0a0909 !important; /* Set company name text color to white */
   font-size: 2.2rem !important;
   font-weight: bold;
 }
@@ -35,15 +35,11 @@ html {
 /* Custom Hamburger Menu Icon Styling */
 .navbar-toggler {
   border-color: rgba(
-    255,
-    255,
-    255,
+    12,
+    12,
+    12,
     0.5
   ) !important; /* Set border color to semi-transparent white */
-}
-
-.navbar-toggler-icon {
-  background-image: url("data:image/svg+xml;charset=UTF8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E") !important;
 }
 
 /* Button Styling */
@@ -61,12 +57,7 @@ h1.display-4 {
   font-family: 'Arial Black', sans-serif; /* Use a bold font for impact */
   font-size: 3.5rem; /* Large size for prominence */
   color: #4a90e2; /* Vibrant blue color */
-  background-image: linear-gradient(
-    120deg,
-    #ff6b6b,
-    #f8c74e,
-    #4a90e2
-  ); /* Paint-like gradient */
+
   background-clip: text; /* Clip background to text */
   -webkit-background-clip: text; /* Required for text clipping in Webkit browsers */
   color: transparent; /* Set text color to transparent to show gradient */
@@ -98,30 +89,12 @@ p.lead {
   text-align: center; /* Center text */
 }
 
-/* Additional Effects for h1 */
-h1.display-4::after {
-  content: '';
-  position: absolute;
-  bottom: -10px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 60%;
-  height: 8px;
-  background: linear-gradient(
-    90deg,
-    #ff6b6b,
-    #f8c74e,
-    #4a90e2
-  ); /* Gradient paint-stroke effect */
-  border-radius: 4px;
-  opacity: 0.7;
-}
 /* Styling for the h1 Heading */
 h1.display-4 {
   font-family: 'Arial Black', sans-serif; /* Bold and clean font */
   font-size: 3rem; /* Large size for prominence */
   color: #ffffff; /* Use pure white for maximum contrast */
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 1); /* Stronger shadow for better readability */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 5); /* Stronger shadow for better readability */
   padding: 10px; /* Padding for spacing */
   position: relative;
   display: inline-block;
@@ -138,7 +111,7 @@ p.lead {
     0,
     0,
     0,
-    0.5
+    0
   ); /* Semi-transparent black background for contrast */
   padding: 15px 20px; /* Padding for spacing */
   border-radius: 8px; /* Rounded corners */
@@ -152,19 +125,18 @@ p.lead {
 /* Hero Section Styling */
 .hero-section {
   position: relative;
-  width: 100%; /* Full width */
   height: 100vh; /* Full viewport height */
-  background-image: url(../images/bucketofpaintwithrollor.jpg); /* Replace with your hero image path */
-  background-size: cover; /* Cover the entire hero section */
-  background-position: center; /* Center the image */
-  background-repeat: no-repeat; /* Do not repeat the image */
+  background-image: url(../images/lady.jpg); /* Replace with your hero image path */
+  background-size: cover; /* Adjust the size to cover the entire section */
+  background-position: bottom; /* Center the image */
+  background-repeat: no-repeat; /* Prevent background image from repeating */
   background-attachment: fixed; /* Creates a parallax scrolling effect */
   display: flex;
-  flex-direction: column; /* Arrange content vertically */
-  justify-content: center; /* Center elements vertically */
+  flex-direction: column;
+  justify-content: space-between; /* Space elements evenly */
   align-items: center; /* Center elements horizontally */
   color: #ffffff;
-  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5); /* Subtle shadow */
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6); /* Add text shadow for better visibility */
   padding: 20px;
 }
 
