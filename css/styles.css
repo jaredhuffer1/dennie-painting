@@ -182,7 +182,7 @@ p.lead {
   font-size: 1.5rem;
   font-weight: bold;
   color: #ff4444;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 1);
   z-index: 10;
 }
 
@@ -191,9 +191,9 @@ p.lead {
   display: inline-block;
   padding: 10px 20px;
   background-color: transparent;
-  border: 2px solid #ff4444;
+  border: 2px solid #ffff;
   border-radius: 5px;
-  color: #ff4444 !important;
+  color: #ffff !important;
   text-decoration: none;
   font-size: 1.5rem;
   transition: background-color 0.3s ease, color 0.3s ease;
