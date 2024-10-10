@@ -30,3 +30,24 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 });
+// Function to add 'active' class to elements when scrolled into view
+function revealOnScroll() {
+  const reveals = document.querySelectorAll('.about-title, .about-text');
+
+  for (let i = 0; i < reveals.length; i++) {
+    const windowHeight = window.innerHeight;
+    const elementTop = reveals[i].getBoundingClientRect().top;
+    const elementVisible = 150;
+
+    if (elementTop < windowHeight - elementVisible) {
+      reveals[i].classList.add('active');
+    } else {
+      reveals[i].classList.remove('active');
+    }
+  }
+}
+
+// Add an 'active' class with CSS animation
+document.addEventListener('DOMContentLoaded', function () {
+  window.addEventListener('scroll', revealOnScroll);
+});
