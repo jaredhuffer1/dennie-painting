@@ -17,29 +17,24 @@ html {
 }
 
 .navbar-nav .nav-link {
-  color: #0a0909 !important; /* Set link color to white */
-  font-size: 1.1rem; /* Increase font size */
-  font-weight: 500; /* Slightly bolder font */
+  color: #0a0909 !important;
+  font-size: 1.1rem;
+  font-weight: 500;
 }
 
 .navbar-nav .nav-link:hover {
-  color: #f8f9fa !important; /* Lighter color on hover */
+  color: #f8f9fa !important;
 }
 
 .navbar-text {
-  color: #0a0909 !important; /* Set company name text color to white */
+  color: #0a0909 !important;
   font-size: 2.2rem !important;
   font-weight: bold;
 }
 
 /* Custom Hamburger Menu Icon Styling */
 .navbar-toggler {
-  border-color: rgba(
-    12,
-    12,
-    12,
-    0.5
-  ) !important; /* Set border color to semi-transparent white */
+  border-color: rgba(12, 12, 12, 0.5) !important;
 }
 
 /* Button Styling */
@@ -54,103 +49,84 @@ html {
 
 /* Styling for the h1 Heading */
 h1.display-4 {
-  font-family: 'Arial Black', sans-serif; /* Use a bold font for impact */
-  font-size: 3.5rem; /* Large size for prominence */
-  color: #4a90e2; /* Vibrant blue color */
-
-  background-clip: text; /* Clip background to text */
-  -webkit-background-clip: text; /* Required for text clipping in Webkit browsers */
-  color: transparent; /* Set text color to transparent to show gradient */
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Add a subtle shadow */
-  padding: 10px; /* Add padding for spacing */
+  font-family: 'Arial Black', sans-serif;
+  font-size: 3.5rem;
+  color: #4a90e2;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  padding: 10px;
   position: relative;
   display: inline-block;
-  margin-bottom: 15px; /* Space below heading */
-  text-transform: uppercase; /* Make text uppercase */
+  margin-bottom: 15px;
+  text-transform: uppercase;
 }
 
 /* Styling for the p Lead Text */
 p.lead {
   font-family: 'Arial', sans-serif;
-  font-size: 1.5rem; /* Slightly larger than default */
-  color: #333333; /* Dark gray color */
+  font-size: 1.5rem;
+  color: #333333;
   background: linear-gradient(
     90deg,
     rgba(255, 107, 107, 0.1),
     rgba(248, 199, 78, 0.1),
     rgba(74, 144, 226, 0.1)
-  ); /* Light gradient background */
-  padding: 15px; /* Add padding for spacing */
-  border-radius: 8px; /* Rounded corners */
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-  display: inline-block; /* Prevent text wrapping */
-  max-width: 80%; /* Limit width for readability */
-  margin: 0 auto 30px auto; /* Center and space below */
-  text-align: center; /* Center text */
+  );
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  display: inline-block;
+  max-width: 80%;
+  margin: 0 auto 30px auto;
+  text-align: center;
 }
 
-/* Styling for the h1 Heading */
+/* Additional Styling for the h1 Heading */
 h1.display-4 {
-  font-family: 'Arial Black', sans-serif; /* Bold and clean font */
-  font-size: 3rem; /* Large size for prominence */
-  color: #ffffff; /* Use pure white for maximum contrast */
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 5); /* Stronger shadow for better readability */
-  padding: 10px; /* Padding for spacing */
+  font-family: 'Arial Black', sans-serif;
+  font-size: 3rem;
+  color: #ffffff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 5);
+  padding: 10px;
   position: relative;
   display: inline-block;
-  margin-bottom: 40px; /* Space below heading */
-  text-align: center; /* Center align the heading */
+  margin-bottom: 40px;
+  text-align: center;
 }
 
-/* Styling for the p Lead Text */
+/* Additional Styling for the p Lead Text */
 p.lead {
   font-family: 'Arial', sans-serif;
-  font-size: 1.3rem; /* Slightly larger font size */
-  color: #f8f8f8; /* Light gray color for better readability */
-  background: rgba(
-    0,
-    0,
-    0,
-    0
-  ); /* Semi-transparent black background for contrast */
-  padding: 15px 20px; /* Padding for spacing */
-  border-radius: 8px; /* Rounded corners */
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Slightly stronger shadow */
-  display: inline-block; /* Prevent text wrapping */
-  margin: 0 auto 0px auto; /* Center and space below */
-  text-align: center; /* Center text */
-  max-width: 80%; /* Limit width for readability */
+  font-size: 1.3rem;
+  color: #f8f8f8;
+  background: rgba(0, 0, 0, 0);
+  padding: 15px 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  display: inline-block;
+  margin: 0 auto 0px auto;
+  text-align: center;
+  max-width: 80%;
 }
 
 /* Hero Section Styling */
 .hero-section {
   position: relative;
-  height: 100vh; /* Full viewport height */
-  background-image: url(../images/lady.jpg); /* Replace with your hero image path */
-  background-size: cover; /* Adjust the size to cover the entire section */
-  background-position: bottom; /* Center the image */
-  background-repeat: no-repeat; /* Prevent background image from repeating */
-  background-attachment: fixed; /* Creates a parallax scrolling effect */
+  height: 100vh;
+  background-image: url(../images/lady.jpg);
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   display: flex;
   flex-direction: column;
-  justify-content: space-between; /* Space elements evenly */
-  align-items: center; /* Center elements horizontally */
+  justify-content: space-between;
+  align-items: center;
   color: #ffffff;
-  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6); /* Add text shadow for better visibility */
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
   padding: 20px;
-}
-
-/* Responsive Styling for Hero Section on Mobile */
-@media (max-width: 768px) {
-  .hero-section {
-    height: auto; /* Allow height to adjust based on content */
-    min-height: 100vh; /* Minimum height should be 100% of the viewport */
-    background-size: contain; /* Contain the entire image within the hero section */
-    background-position: center top; /* Position the image at the top center */
-    background-attachment: scroll; /* Disable parallax effect on mobile devices */
-    background-repeat: no-repeat; /* Ensure no repetition */
-    padding: 20px; /* Adjust padding */
-  }
 }
 
 /* Hero Section Content Styling */
@@ -159,33 +135,33 @@ p.lead {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex-grow: 1; /* Allow container to grow and fill available space */
-  margin-bottom: -10px; /* Increase space below hero section container */
+  flex-grow: 1;
+  margin-bottom: -10px;
 }
 
 .hero-title {
   font-size: 3rem;
   margin-bottom: 15px;
-  animation: fadeInDown 1s ease-in-out; /* Scroll animation */
+  animation: fadeInDown 1s ease-in-out;
 }
 
 .hero-subtitle {
   font-size: 1.5rem;
   margin-bottom: 30px;
-  animation: fadeInUp 1s ease-in-out; /* Scroll animation */
+  animation: fadeInUp 1s ease-in-out;
 }
 
 /* Discount Section Styling */
 .hero-section .discount-section {
-  background: rgba(72, 71, 70, 0.5); /* Semi-transparent background */
-  color: #ffffff; /* White text color */
+  background: rgba(72, 71, 70, 0.5);
+  color: #ffffff;
   padding: 20px;
   border-radius: 8px;
   max-width: 600px;
-  margin-top: 50px; /* Space from hero content */
-  margin-bottom: 50px; /* Add space below discount section */
+  margin-top: 50px;
+  margin-bottom: 50px;
   text-align: center;
-  z-index: 10; /* Ensure it stays above other elements */
+  z-index: 10;
 }
 
 /* Discount Section Content */
@@ -200,48 +176,48 @@ p.lead {
 
 /* Phone Number Styling in Hero Section */
 .hero-phone-number {
-  position: absolute; /* Position relative to the hero section */
-  top: 20px; /* Position 20px from the top */
-  right: 20px; /* Position 20px from the right */
+  position: absolute;
+  top: 20px;
+  right: 20px;
   font-size: 1.5rem;
   font-weight: bold;
-  color: #ff4444; /* Red color to stand out */
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Optional: Shadow for better visibility */
-  z-index: 10; /* Ensure it stays on top */
+  color: #ff4444;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  z-index: 10;
 }
 
 /* Style the Phone Link */
 .hero-phone-number .phone-link {
-  display: inline-block; /* Ensure it’s treated like a button */
-  padding: 10px 20px; /* Add padding */
-  background-color: transparent; /* Remove default background */
-  border: 2px solid #ff4444; /* Add red border */
-  border-radius: 5px; /* Slight rounding of corners */
-  color: #ff4444 !important; /* Override Bootstrap link color */
-  text-decoration: none; /* Remove underline */
-  font-size: 1.5rem; /* Adjust font size */
-  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transitions */
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: transparent;
+  border: 2px solid #ff4444;
+  border-radius: 5px;
+  color: #ff4444 !important;
+  text-decoration: none;
+  font-size: 1.5rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 /* Style on Hover */
 .hero-phone-number .phone-link:hover {
-  background-color: #ff4444; /* Red background on hover */
-  color: #fff !important; /* White text on hover */
+  background-color: #ff4444;
+  color: #fff !important;
 }
 
 /* Flash Animation */
 @keyframes flash {
   0%,
   100% {
-    opacity: 1; /* Fully visible */
+    opacity: 1;
   }
   50% {
-    opacity: 0.5; /* Half visible */
+    opacity: 0.5;
   }
 }
 
 .hero-phone-number .phone-link {
-  animation: flash 1s infinite; /* Apply flashing animation */
+  animation: flash 1s infinite;
 }
 
 /* Scroll Animations */
@@ -280,18 +256,18 @@ p.lead {
 #gallery img {
   border: 2px solid #ddd;
   transition: transform 0.3s ease;
-  width: 100%; /* Full width of column */
-  height: auto; /* Maintain aspect ratio */
+  width: 100%;
+  height: auto;
 }
 
 #gallery img:hover {
-  transform: scale(1.05); /* Zoom effect */
+  transform: scale(1.05);
 }
 
 /* Sponsor Section Styling */
 .sponsor-section {
   padding: 50px 0;
-  background-color: #f8f9fa; /* Optional: Light background color */
+  background-color: #f8f9fa;
 }
 
 .sponsor-title {
@@ -302,32 +278,32 @@ p.lead {
 
 /* Auto-Scrolling Sponsor Carousel Styling */
 .sponsor-carousel {
-  overflow: hidden; /* Hide overflow */
+  overflow: hidden;
   position: relative;
-  width: 100%; /* Full width of container */
+  width: 100%;
 }
 
 .sponsor-track {
   display: flex;
-  animation: scroll 20s linear infinite; /* Scroll animation */
+  animation: scroll 20s linear infinite;
 }
 
 .sponsor-logo {
-  flex: 0 0 auto; /* Prevent wrapping */
-  width: 150px; /* Set fixed width for each logo */
-  margin: 0 20px; /* Space between logos */
+  flex: 0 0 auto;
+  width: 150px;
+  margin: 0 20px;
 }
 
 .sponsor-logo img {
-  width: 100%; /* Full width of the logo container */
-  height: auto; /* Maintain aspect ratio */
-  border: 2px solid #ddd; /* Optional: Border around logos */
-  border-radius: 8px; /* Optional: Rounded corners */
-  transition: transform 0.3s ease; /* Animation on hover */
+  width: 100%;
+  height: auto;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
 }
 
 .sponsor-logo img:hover {
-  transform: scale(1.05); /* Slightly enlarge on hover */
+  transform: scale(1.05);
 }
 
 /* Scroll Animation Keyframes */
@@ -336,7 +312,7 @@ p.lead {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-50%); /* Move left by 50% */
+    transform: translateX(-50%);
   }
 }
 
@@ -347,11 +323,11 @@ p.lead {
     text-align: center;
     width: 100%;
     font-size: 1.2rem;
-    margin-top: 10px; /* Spacing */
+    margin-top: 10px;
   }
 
   .navbar-nav .nav-link {
-    font-size: 1rem; /* Slightly smaller links */
+    font-size: 1rem;
   }
 
   .navbar .btn-dark {
@@ -362,42 +338,42 @@ p.lead {
   }
 
   .hero-phone-number {
-    font-size: 1.2rem; /* Smaller font size on mobile */
-    top: 10px; /* Adjust position on mobile */
-    right: 10px; /* Adjust position on mobile */
+    font-size: 1.2rem;
+    top: 10px;
+    right: 10px;
   }
 
   .hero-phone-number .phone-link {
-    font-size: 1.2rem; /* Adjust link font size */
-    padding: 8px 16px; /* Adjust padding on mobile */
+    font-size: 1.2rem;
+    padding: 8px 16px;
   }
 
   .hero-title {
-    font-size: 2.5rem; /* Smaller font size for mobile */
+    font-size: 2.5rem;
   }
 
   .hero-subtitle {
-    font-size: 1.2rem; /* Smaller subtitle size for mobile */
+    font-size: 1.2rem;
   }
 
   .discount-section {
-    padding: 15px; /* Adjust padding for mobile */
+    padding: 15px;
   }
 
   .discount-title {
-    font-size: 1.8rem; /* Smaller title size for mobile */
+    font-size: 1.8rem;
   }
 
   .discount-text {
-    font-size: 1rem; /* Smaller text size for mobile */
+    font-size: 1rem;
   }
 
   .sponsor-carousel {
-    height: 100px; /* Adjust height for smaller screens */
+    height: 100px;
   }
 
   .sponsor-logo {
-    width: 100px; /* Smaller logos on mobile */
+    width: 100px;
   }
 
   .sponsor-title {
@@ -406,6 +382,6 @@ p.lead {
 
   /* Parallax Effect Control for Mobile */
   .hero-section {
-    background-attachment: scroll; /* Disable parallax effect on mobile devices */
+    background-attachment: scroll;
   }
 }
