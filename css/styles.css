@@ -41,6 +41,7 @@ html {
 .btn-dark {
   background-color: #007bff; /* Teal color */
   border: none;
+  margin-bottom: 30px; /* Adjust this value as needed to increase/decrease spacing */
 }
 
 .btn-dark:hover {
@@ -137,7 +138,7 @@ p.lead {
   justify-content: center;
   align-items: center;
   flex-grow: 1;
-  margin-bottom: -10px;
+  margin-bottom: -80px;
 }
 
 .hero-title {
@@ -154,25 +155,46 @@ p.lead {
 
 /* Discount Section Styling */
 .hero-section .discount-section {
-  background: rgba(72, 71, 70, 0.5);
-  color: #ffffff;
-  padding: 20px;
-  border-radius: 8px;
-  max-width: 600px;
-  margin-top: 50px;
-  margin-bottom: 50px;
+  background: rgba(255, 255, 255, 0.15); /* Transparent white background */
+  color: #ff6347; /* Use a soft red color */
+  padding: 30px; /* Increase padding for space */
+  border: 2px dashed #ff6347; /* Dashed border to give it a 'coupon' feel */
+  border-radius: 12px;
+  max-width: 700px; /* Make the section a bit wider */
+  margin-top: 60px;
+  margin-bottom: 60px;
   text-align: center;
   z-index: 10;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3); /* Stronger shadow for more emphasis */
 }
 
-/* Discount Section Content */
-.discount-title {
-  font-size: 2rem;
-  margin-bottom: 10px;
+/* Discount Title Styling */
+.hero-section .discount-section .discount-title {
+  font-size: 2.2rem; /* Increase font size */
+  font-weight: 800; /* Extra bold */
+  color: #ff6347; /* Strong red color for emphasis */
+  margin-bottom: 20px; /* Add space below */
+  text-transform: uppercase; /* Uppercase text */
+  letter-spacing: 1.8px; /* Slightly more spacing between letters */
+  background: linear-gradient(
+    90deg,
+    rgba(255, 99, 71, 0.1),
+    rgba(255, 99, 71, 0.2)
+  ); /* Gradient for emphasis */
+  padding: 10px; /* Add padding for emphasis */
+  border-radius: 8px; /* Rounded corners */
 }
 
-.discount-text {
-  font-size: 1.2rem;
+/* Discount Text Styling */
+.hero-section .discount-section .discount-text {
+  font-size: 1.4rem; /* Slightly larger text */
+  color: #fff; /* White text color for contrast */
+  font-weight: 400; /* Regular weight */
+  margin: 0 auto;
+  max-width: 80%; /* Limit width for readability */
+  background: rgba(255, 99, 71, 0.2); /* Light background for text */
+  padding: 15px; /* Spacing around text */
+  border-radius: 8px; /* Rounded corners */
 }
 
 /* Phone Number Styling in Hero Section */
@@ -478,4 +500,40 @@ p.lead {
 .about-text.active {
   opacity: 1;
   transform: translateY(0);
+}
+/* Scrolling Banner Styling */
+.scrolling-banner {
+  position: fixed; /* Fix the position at the top */
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px 0;
+  background: rgba(255, 99, 71, 0.9); /* Red background for emphasis */
+  z-index: 9999; /* Ensure it's on top of other elements */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Slight shadow for depth */
+  overflow: hidden;
+}
+
+.scrolling-banner-text {
+  color: #ffffff; /* White text for readability */
+  font-size: 1.2rem; /* Medium font size */
+  font-weight: 600; /* Slightly bolder text */
+  text-align: center;
+  animation: scroll-left 20s linear infinite; /* Smooth scrolling animation */
+  white-space: nowrap; /* Prevent text from wrapping */
+}
+
+/* Scrolling Animation */
+@keyframes scroll-left {
+  0% {
+    transform: translateX(100%); /* Start from the right */
+  }
+  100% {
+    transform: translateX(-100%); /* Move to the left */
+  }
+}
+
+/* Add some top padding to the body to accommodate the banner */
+body {
+  padding-top: 60px; /* Adjust if needed based on banner height */
 }
