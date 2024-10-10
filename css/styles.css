@@ -37,14 +37,15 @@ html {
   border-color: rgba(12, 12, 12, 0.5) !important;
 }
 
-/* Button Styling */
+/* CSS for Get in Touch Button */
 .btn-dark {
-  background-color: #555;
+  background-color: #007bff; /* Teal color */
   border: none;
 }
 
 .btn-dark:hover {
-  background-color: #333;
+  background-color: #1aa386; /* Darker Teal on Hover */
+  color: #ffffff; /* Ensure text is white */
 }
 
 /* Styling for the h1 Heading */
