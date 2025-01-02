@@ -522,7 +522,7 @@ p.lead {
   font-size: 1rem; /* Smaller font size */
   font-weight: 600; /* Slightly bolder font for emphasis */
   white-space: nowrap; /* Prevent text wrapping */
-  animation: scroll-left 15s linear infinite; /* Constant scrolling with no empty moments */
+  animation: scroll-left 20s linear infinite; /* Constant scrolling with no empty moments */
 }
 
 /* Scrolling Animation */
